@@ -1,7 +1,7 @@
 # Sales-Overview-Dashboard
 
 ![excel-sql-power bi](dashboard%20img.png)
-assets/images/view-query-result.png
+dashboard%20img.png
 
 # Table of Content
 
