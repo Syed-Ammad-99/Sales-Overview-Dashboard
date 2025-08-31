@@ -1,6 +1,6 @@
 # Sales-Overview-Dashboard
 
-![excel-sql-power bi](assets/images/kaggle_to_powerbi.gif)
+![excel-sql-power bi](dashboard%20img.png)
 assets/images/view-query-result.png
 
 # Table of Content
