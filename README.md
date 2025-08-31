@@ -1,17 +1,7 @@
 # Sales-Overview-Dashboard
 
 ![excel-sql-power bi](dashboard%20img.png)
-dashboard%20img.png
 
-# Table of Content
-
--  [Project 1](#Project-1)
-  -  [Subheader]()
--  [Project 2](#Project-2)
--  [Project 3](#Project-3)
-
-
-#Project-1
 
 ## Table of contents 
 
