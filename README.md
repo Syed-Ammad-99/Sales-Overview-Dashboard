@@ -133,7 +133,8 @@ The transformation process will extract data from AdventureWorks sample database
 
 #### Transform the data 
 
-```DIM
+- DIM
+```sql
 SELECT
 	   p.[ProductKey]
       ,p.[ProductAlternateKey] AS ProductItemCode
@@ -179,8 +180,9 @@ SELECT
 ORDER BY
 p.ProductKey ASC
 ```
+- DIM_Calender
 
-```DIM_Calender
+```sql
 SELECT 
   [DateKey] AS Date, 
   [FullDateAlternateKey]
@@ -208,7 +210,9 @@ WHERE
 	CalendarYear >= 2019
 ```
 
-```DIM_Customer
+- DIM_Customer
+
+```sql
 -- Cleaned DIM_Customer Table --
 
 SELECT c.customerkey AS CustomerKey
@@ -267,7 +271,9 @@ FROM
     view_uk_youtubers_2024;
 
 ```
-```DIM_Product
+- DIM_Product
+
+```sql
 
 SELECT
 	   p.[ProductKey]
@@ -330,7 +336,9 @@ FROM
 WHERE
     TABLE_NAME = 'view_uk_youtubers_2024'
 ```
-```FACT_InternetSales
+FACT_InternetSales
+
+```sql
 SELECT [ProductKey]
       ,[OrderDateKey]
       ,[DueDateKey]
