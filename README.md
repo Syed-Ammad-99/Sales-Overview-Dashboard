@@ -138,41 +138,14 @@ The transformation process will extract data from AdventureWorks sample database
 SELECT
 	   p.[ProductKey]
       ,p.[ProductAlternateKey] AS ProductItemCode
-      --,[ProductSubcategoryKey]
-      --,[WeightUnitMeasureCode]
-      --,[SizeUnitMeasureCode]
       ,p.[EnglishProductName] AS [Product Name],
 	  ps.SpanishProductSubcategoryName AS [Sub Category], --Join in from sub category table
 	  pc.EnglishProductCategoryName AS [Product Category]--Join in from category table
-      --,[SpanishProductName]
-      --,[FrenchProductName]
-      --,[StandardCost]
-      --,[FinishedGoodsFlag]
       ,p.[Color] AS [Product Color]
-      --,[SafetyStockLevel]
-      --,[ReorderPoint]
-      --,[ListPrice]
       ,p.[Size] AS [Product Size]
-      --,[SizeRange]
-      --,[Weight]
-      --,[DaysToManufacture]
       ,p.[ProductLine] AS [Product Line]
-      --,[DealerPrice]
-      --,[Class]
-      --,[Style]
       ,p.[ModelName] AS [Product Model Name]
-      --,[LargePhoto]
       ,p.[EnglishDescription]	AS [[English Description]
-      --,[FrenchDescription]
-      --,[ChineseDescription]
-      --,[ArabicDescription]
-      --,[HebrewDescription]
-      --,[ThaiDescription]
-      --,[GermanDescription]
-      --,[JapaneseDescription]
-      --,[TurkishDescription]
-      --,[StartDate]
-      --,[EndDate]
       ,ISNULL (p.Status, 'Outdate') AS [Product Status]
   FROM [AdventureWorksDW2019].[dbo].[DimProduct] AS p
   LEFT JOIN dbo.DimProductSubcategory AS ps ON ps.ProductSubcategoryKey	= p.ProductSubcategoryKey
@@ -186,24 +159,13 @@ p.ProductKey ASC
 SELECT 
   [DateKey] AS Date, 
   [FullDateAlternateKey]
-  --,[DayNumberOfWeek]
   ,[EnglishDayNameOfWeek] AS Day 
-  -- ,[SpanishDayNameOfWeek]
-  --,[FrenchDayNameOfWeek]
-  -- ,[DayNumberOfMonth]
-  -- ,[DayNumberOfYear]
   ,[WeekNumberOfYear] AS WeekNr
   ,[EnglishMonthName] AS Month
   ,LEFT([EnglishMonthName], 3) AS Month
-  -- ,[SpanishMonthName]
-  --  ,[FrenchMonthName]
   ,[MonthNumberOfYear] AS MonthNo
   ,[CalendarQuarter] AS Quarter
   ,[CalendarYear] AS Year
-  --,[CalendarSemester]
-  --,[FiscalQuarter]
-  --,[FiscalYear]
-  --,[FiscalSemester]
 FROM 
   [AdventureWorksDW2019].[dbo].[DimDate]
 WHERE
@@ -216,60 +178,16 @@ WHERE
 -- Cleaned DIM_Customer Table --
 
 SELECT c.customerkey AS CustomerKey
-    --  ,[GeographyKey]
-    --  ,[CustomerAlternateKey]
-    --  ,[Title]
         ,c.firstname AS [FirstName]
-    --  ,[MiddleName]
       ,[LastName]
-    --  ,[NameStyle]
-    --  ,[BirthDate]
-    --  ,[MaritalStatus]
-    --  ,[Suffix]
 	,CASE c.gender WHEN 'M' THEN 'Male' WHEN 'F' THEN 'Female' END AS Gender
-    --  ,[EmailAddress]
-    --  ,[YearlyIncome]
-    --  ,[TotalChildren]
-    --  ,[NumberChildrenAtHome]
-    --  ,[EnglishEducation]
-    --  ,[SpanishEducation]
-    --  ,[FrenchEducation]
-    --  ,[EnglishOccupation]
-    --  ,[SpanishOccupation]
-    --  ,[FrenchOccupation]
-    --  ,[HouseOwnerFlag]
-    --  ,[NumberCarsOwned]
-    --  ,[AddressLine1]
-    --  ,[AddressLine2]
-    --  ,[Phone]
     ,[DateFirstPurchase]
-    --  ,[CommuteDistance]
 	,g.city AS [Customer City] ----Joined in Customer City from Geography Table
 FROM 
     dbo.dimCustomer AS c
 	LEFT JOIN dbo.dimgeography AS g ON g.geographykey = c.geographykey
 ORDER BY
 	CustomerKey ASC --ORDER by CustomerKey```
-
-![create-view-query-sql](assets/images/view-query-result.png)
-
-# Testing 
-
-- What data quality and validation checks are you going to create?
-
-Here are the data quality tests conducted:
-
-## Row count check
-```sql
-/*
-# Count the total number of records (or rows) are in the SQL view
-*/
-
-SELECT
-    COUNT(*) AS no_of_rows
-FROM
-    view_uk_youtubers_2024;
-
 ```
 - DIM_Product
 
@@ -278,41 +196,15 @@ FROM
 SELECT
 	   p.[ProductKey]
       ,p.[ProductAlternateKey] AS ProductItemCode
-      --,[ProductSubcategoryKey]
-      --,[WeightUnitMeasureCode]
-      --,[SizeUnitMeasureCode]
       ,p.[EnglishProductName] AS [Product Name],
 	  ps.SpanishProductSubcategoryName AS [Sub Category], --Join in from sub category table
 	  pc.EnglishProductCategoryName AS [Product Category]--Join in from category table
-      --,[SpanishProductName]
-      --,[FrenchProductName]
-      --,[StandardCost]
-      --,[FinishedGoodsFlag]
       ,p.[Color] AS [Product Color]
-      --,[SafetyStockLevel]
-      --,[ReorderPoint]
-      --,[ListPrice]
       ,p.[Size] AS [Product Size]
-      --,[SizeRange]
-      --,[Weight]
-      --,[DaysToManufacture]
       ,p.[ProductLine] AS [Product Line]
-      --,[DealerPrice]
-      --,[Class]
-      --,[Style]
       ,p.[ModelName] AS [Product Model Name]
       --,[LargePhoto]
       ,p.[EnglishDescription]	AS [[English Description]
-      --,[FrenchDescription]
-      --,[ChineseDescription]
-      --,[ArabicDescription]
-      --,[HebrewDescription]
-      --,[ThaiDescription]
-      --,[GermanDescription]
-      --,[JapaneseDescription]
-      --,[TurkishDescription]
-      --,[StartDate]
-      --,[EndDate]
       ,ISNULL (p.Status, 'Outdate') AS [Product Status]
   FROM [AdventureWorksDW2019].[dbo].[DimProduct] AS p
   LEFT JOIN dbo.DimProductSubcategory AS ps ON ps.ProductSubcategoryKey	= p.ProductSubcategoryKey
@@ -320,21 +212,6 @@ SELECT
 ORDER BY
 p.ProductKey ASC
 
-![total-row-count](assets/images/total-row-count.png)
-
-## Column count check
-### SQL query 
-```sql
---Count the total number of columns (or fields) are in the SQL view
-
-
-
-SELECT
-    COUNT(*) AS column_count
-FROM
-    INFORMATION_SCHEMA.COLUMNS
-WHERE
-    TABLE_NAME = 'view_uk_youtubers_2024'
 ```
 FACT_InternetSales
 
@@ -344,50 +221,14 @@ SELECT [ProductKey]
       ,[DueDateKey]
       ,[ShipDateKey]
       ,[CustomerKey]
-      --,[PromotionKey]
-      --,[CurrencyKey]
-      --,[SalesTerritoryKey]
       ,[SalesOrderNumber]
-      --,[SalesOrderLineNumber]
-      --,[RevisionNumber]
-      --,[OrderQuantity]
-      --,[UnitPrice]
-      --,[ExtendedAmount]
-      --,[UnitPriceDiscountPct]
-      --,[DiscountAmount]
-      --,[ProductStandardCost]
-      --,[TotalProductCost]
       ,[SalesAmount]
-      --,[TaxAmt]
-      --,[Freight]
-      --,[CarrierTrackingNumber]
-      --,[CustomerPONumber]
-      --,[OrderDate]
-      --,[DueDate]
-      --,[ShipDate]
+
   FROM [AdventureWorksDW2019].[dbo].[FactInternetSales]
 WHERE
 	LEFT (OrderDateKey,4) = YEAR('2019') --Ensure we always only brings two years of date from extraction.
 ORDER BY
  OrderDateKey ASC
-### Output 
-![total-column-count](assets/images/total-column-count.png)
-
-## Data type check
-### SQL query 
-```sql
-/*
-# Check the data types of each column from the view by checking the INFORMATION SCHEMA view
-*/
-
--- 1.
-SELECT
-    COLUMN_NAME,
-    DATA_TYPE
-FROM
-    INFORMATION_SCHEMA.COLUMNS
-WHERE
-    TABLE_NAME = 'view_uk_youtubers_2024';
 ```
 
 # Analysis 
