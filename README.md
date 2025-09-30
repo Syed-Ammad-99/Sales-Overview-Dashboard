@@ -15,10 +15,8 @@
   - [Pseudocode](#pseudocode)
   - [Data Transformation](#data-transformation)
   - [Transform the Data](#transform-the-data)
-  - [Potential ROI](#potential-roi)
-  - [Potential Courses of Actions](#potential-courses-of-actions)
-- [Conclusion](#conclusion)
-
+- [Analysis](#Analysis)
+  - [Findings](#Findings)
 
 # Objective 
 
