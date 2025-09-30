@@ -51,9 +51,9 @@ This will help the sales team make informed decisions.
 
 ## Data source 
 
-- What data is needed to achieve our objective?
+The AdventureWorks databases are sample databases that were originally published by Microsoft to show how to design a SQL Server database using SQL Server 2008. AdventureWorks is the OLTP sample, and AdventureWorksDW is the data warehouse sample.
 
-We need data on the top UK YouTubers in 2024 that includes their 
+- What data is needed to achieve our objective?
 - Sales by Product Category
 - Sales by Top 10 Customers / Products / Customers City
 - Budget Amount and Sales by Month
