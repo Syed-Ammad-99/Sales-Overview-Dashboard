@@ -233,4 +233,54 @@ ORDER BY
 
 ## Findings
 
-- What did we find?
+- What is the sales distribution between product category?
+  Product category bike contribute major role in sales with 99%.
+  
+- Who are the top buyer?
+
+| Name | Sales (around figure) |
+| --- | --- |
+| Jay | 35000 |
+| Colleen | 30000 |
+| Denanna | 30000 |
+| Joe | 29000 |
+| Jannifer | 28000 |
+| Ian | 28000 |
+| Morgan | 28000 |
+| Michele | 27000 |
+| Marcos | 26000 |
+| Nathan | 25000 |
+| Total | 287808 |
+
+- Which are the top product?
+
+| Name | Sales |
+| --- | --- |
+| Mountain-200 Black, 46 | 423589 |
+| Mountain-200 Black, 42 | 392361 |
+| Road-250 Red, 48 | 388492 |
+| Road-250 Black, 52 | 378195 |
+| Mountain-200 Silver, 46 | 377744 |
+| Road-250 Red, 58 | 376014 |
+| Mountain-200 Silver, 38 | 372026 |
+| Mountain-200 Silver, 42 | 352887 |
+| Road-250 Red, 44 | 346955 |
+| Mountain-200 Black, 38 | 342937 |
+| Total | 3751204 |
+
+- Month by month comparison of budget amount vs sales?
+| Moth | Sales |
+| --- | --- |
+| 1 | 495364 |
+| 2 | 504139 |
+| 3 | 373483 |
+| 4 | 400335 |
+| 5 | 358877 |
+| 6 | 555160 |
+| 7 | 444558 |
+| 8 | 523917 |
+| 9 | 486177 |
+| 10 | 535159 |
+| 11 | 537955 |
+| 12 | 624502 |
+| Total | 5842485 |
