@@ -269,7 +269,8 @@ ORDER BY
 | Total | 3751204 |
 
 - Month by month comparison of budget amount vs sales?
-| Moth | Sales |
+  
+| Month | Sales |
 | --- | --- |
 | 1 | 495364 |
 | 2 | 504139 |
